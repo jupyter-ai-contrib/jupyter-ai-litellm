@@ -25,6 +25,6 @@ def setup_handlers(web_app):
     route_pattern = url_path_join(base_url, "jupyter-ai-litellm", "get-example")
     handlers = [
         (route_pattern, RouteHandler),
-        (url_path_join(base_url, "api/models/chat") + r"(?:\?.*)?", ChatModelsRestAPI)
+        (url_path_join(base_url, "api/ai/models/chat") + r"(?:\?.*)?", ChatModelsRestAPI)
     ]
     web_app.add_handlers(host_pattern, handlers)

@@ -14,7 +14,7 @@ async def test_get_example(jp_fetch):
 
 async def test_get_chat_models(jp_fetch):
     # When
-    response = await jp_fetch("api", "models", "chat")
+    response = await jp_fetch("api", "ai", "models", "chat")
 
     # Then
     assert response.code == 200

@@ -16,7 +16,7 @@ This extension is composed of a Python package named `jupyter_ai_litellm` that e
 
 ### Chat Models
 
-- `GET /api/models/chat` - Returns a list of all available chat models
+- `GET /api/ai/models/chat` - Returns a list of all available chat models
 
 The response includes model IDs in LiteLLM format (e.g., `openai/gpt-4`, `anthropic/claude-3-sonnet`, etc.)
 
