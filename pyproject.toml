@@ -27,7 +27,8 @@ authors = [
     { name = "Project Jupyter", email = "jupyter@googlegroups.com" },
 ]
 dependencies = [
-    "jupyter_server>=2.4.0,<3"
+    "jupyter_server>=2.4.0,<3",
+    "litellm>=1.73,<2",
 ]
 dynamic = ["version"]
 
