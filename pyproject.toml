@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version>=0.3.2"]
+requires = ["hatchling>=1.5.0"]
 build-backend = "hatchling.build"
 
 [project]
@@ -50,26 +50,11 @@ test = [
 [tool.hatch.version]
 path = "jupyter_ai_litellm/_version.py"
 
-
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyter-config/server-config" = "etc/jupyter/jupyter_server_config.d"
 
-[tool.hatch.build.hooks.version]
-path = "jupyter_ai_litellm/_version.py"
-
-[tool.hatch.build.hooks.jupyter-builder]
-dependencies = ["hatch-jupyter-builder>=0.5"]
-build-function = "hatch_jupyter_builder.npm_builder"
-ensured-targets = [
-    "jupyter_ai_litellm/labextension/static/style.js",
-    "jupyter_ai_litellm/labextension/package.json",
-]
-skip-if-exists = ["jupyter_ai_litellm/labextension/static/style.js"]
-
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"
-
-before-build-python = ["jlpm clean:all"]
 
 [tool.check-wheel-contents]
 ignore = ["W002"]
