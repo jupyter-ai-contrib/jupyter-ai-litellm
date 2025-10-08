@@ -2,9 +2,29 @@
 
 [![Github Actions Status](https://github.com/jupyter-ai-contrib/jupyter-ai-litellm/workflows/Build/badge.svg)](https://github.com/jupyter-ai-contrib/jupyter-ai-litellm/actions/workflows/build.yml)
 
-A JupyterLab extension that provides LiteLLM model abstraction
+A JupyterLab extension that provides LiteLLM model abstraction for Jupyter AI
 
-This extension is composed of a Python package named `jupyter_ai_litellm`.
+This extension is composed of a Python package named `jupyter_ai_litellm` that exposes LiteLLM's extensive catalog of language models through a standardized API.
+
+## Features
+
+- **Comprehensive Model Support**: Access to hundreds of chat and embedding models from various providers (OpenAI, Anthropic, Google, Cohere, Azure, AWS, and more) through LiteLLM's unified interface
+- **Standardized API**: Consistent REST API endpoints for model discovery and interaction
+- **Easy Integration**: Seamlessly integrates with Jupyter AI to expand available model options
+
+## API Endpoints
+
+### Chat Models
+
+- `GET /api/models/chat` - Returns a list of all available chat models
+
+The response includes model IDs in LiteLLM format (e.g., `openai/gpt-4`, `anthropic/claude-3-sonnet`, etc.)
+
+### Model Lists
+
+The extension automatically discovers and categorizes models from LiteLLM's supported providers:
+- Chat models for conversational AI
+- Embedding models for vector representations
 
 ## Requirements
 
