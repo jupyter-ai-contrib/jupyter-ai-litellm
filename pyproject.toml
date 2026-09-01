@@ -27,7 +27,7 @@ authors = [
 ]
 dependencies = [
     "jupyter_server>=2.4.0,<3",
-    "litellm>=1.94.1,<2",
+    "litellm>=1.94.1,<1.98",
 ]
 dynamic = ["version"]
 
